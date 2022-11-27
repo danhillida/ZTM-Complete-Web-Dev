@@ -66,12 +66,8 @@ body.dark {
 
   top: 0;
   height: 200vmin;
-  transform: rotate(var(--rotation));
-  transition: transform var(--tranistion-delay);
-}
-
-.dark .sun-moon-container {
-  --rotation: 180deg;
+  transform: rotate(calc(var(--rotation) * 1deg));
+  transition: transform var(--transition-delay);
 }
 
 .sun,
@@ -94,6 +90,7 @@ body.dark {
 .moon {
   bottom: 5%;
   opacity: 0;
+  transform: rotate(180deg);
 }
 
 .dark .moon {
