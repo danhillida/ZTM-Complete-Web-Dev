@@ -64,6 +64,7 @@ html {
 	justify-content: space-between;
 }
 
+/*------Header--------*/
 .nav-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -99,6 +100,7 @@ html {
 	align-items: center;
 }
 
+/*-------Cards--------*/
 .card {
 	background-color:#d3d3de;
 	border-radius: 1rem;
@@ -110,7 +112,7 @@ html {
 
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 
 }
@@ -123,7 +125,7 @@ html {
 }
 
 .card > img {
-	height: 10vh;
+	height:10vh;
 	width: 10vh;
 	padding: 1rem;
 }
@@ -134,13 +136,14 @@ html {
 	font-weight: 600;
 }
 
+/*-------Media Queries-------*/
 @media (max-width: 490px) {
 	.main-title {
 		font-size: 3rem;
 	} 
 }
 
-@media (max-width: 1124px) {
+@media (max-width: 1150px) {
 	.container {
 		flex-direction: column;
 		margin: 3rem, 0;
