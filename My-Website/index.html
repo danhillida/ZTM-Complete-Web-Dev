@@ -5,13 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>danDotDev</title>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet"> 
+
+    <!--My CSS-->
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;0,800;0,900;1,500&display=swap');
+        </style> 
 </head>
 <body>
     <!--This <section> is for hero image-->
-    <header>
+    <header class="header">
         <nav>
-            <ul >
+            <ul class="nav-container">
               <li class="nav-links"><a href="#">Home</a></li>
               <li class="nav-links"><a href="#">About</a></li>
             </ul>
@@ -19,10 +29,36 @@
         <h1 class="main-title">danDotDev</h1>
     </header>
     
+    <!--These are my cards-->
     <div class="container">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+        <div class="card">
+            <img src="illustration.png">
+            <header class="card-header">
+                <h1>Custom HTML and CSS</h1>
+            </header>
+            <section>
+                <p>Every website is hand-coded to suit your business.  This allows for <strong>blazing fast</strong> load times and ultra-specific <strong>seo optimization</strong>.</p>
+            </section>
+        </div>
+        <div class="card">
+            <img src="responsive.png">
+            <header class="card-header">
+                <h1>Responsive Design</h1>
+            </header>
+            <section>
+                <p>Most people use their mobile device to access the web.  With this in mind, your website is designed mobile-first.  Additionally, each website is responisive so it will look great no matter the device.</p>
+            </section>
+        </div>
+        <div class="card">
+            <img src="hand-made.png">
+            <header class="card-header">
+                <h1>Theme-Free Web Development</h1>
+            </header>
+            <section>
+                <p>We never use themes, so each website is handed-coded for your business. Have peace of mind knowing that no one else shares your website, as well as knowing that your seo is optimized down to the character.</p>
+            </section>
+        </div>
+
     </div>
 
 </body>

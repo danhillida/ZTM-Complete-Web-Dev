@@ -1,4 +1,5 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* -----------Reset-------------------*\ 
+http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -47,29 +48,106 @@ table {
 	border-spacing: 0;
 }
 
-header {
-    background: url(images.jpg);
+/*-------------CSS----------------*/
+html {
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+.header {
+	background: url(images.jpg);
     background-size: cover;
     background-position: center center;
     height: 40vh;
 	display: flex;
-	flex-direction: column;
+	flex-flow: column;
+	justify-content: space-between;
 }
 
-.nav-links {
-    list-style: none;
-    display: inline-block;
-	padding: 1rem 2rem;
-	font-size: 1.5rem;
+.nav-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3rem;
+	margin-top: 1rem;
+	margin-left: 3rem;
+	font-size: 1.5em;
 }
 
 .nav-links a {
-	color: white;
+    list-style: none;
+	color: #f3e7d3;
 	text-decoration: none;
 }
 
+.nav-links a:hover {
+	font-size: 1.6rem;
+	color: #d3d3de;
+}
+
 .main-title {
-	font-size: 4rem;
+	align-self: center;
+	font-size: 4.5rem;
+	font-weight: 800;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 5rem;
+	gap: 5rem;
+	align-items: center;
+}
+
+.card {
+	background-color:#d3d3de;
+	border-radius: 1rem;
+	box-shadow: 5px 5px 10px #63666A;
+	height: 45vh;
+	flex: 1;
+	padding: 2rem;
+	
+
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+}
+
+.card > section {
+	font-size: 1.2rem;
+	font-weight: 300;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	text-align: center;
+}
+
+.card > img {
+	height: 10vh;
+	width: 10vh;
+	padding: 1rem;
+}
+
+.card-header {
+	text-align: center;
+	font-size: 2.1rem;
+	font-weight: 600;
+}
+
+@media (max-width: 490px) {
+	.main-title {
+		font-size: 3rem;
+	} 
+}
+
+@media (max-width: 1124px) {
+	.container {
+		flex-direction: column;
+		margin: 3rem, 0;
+	}
+	.card {
+		width: 90%;
+		margin: 5rem, 0;
+	}
+	
 }
