@@ -1,0 +1,34 @@
+body {
+    background-color: #131316;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 101vh;
+  }
+  
+  .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+    transition-delay: 100ms;
+  }
+  
+  /* @media(prefers-reduced-motion) {
+    .hidden {
+      transition: none;
+    }
+  } */
+  
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
