@@ -27,7 +27,30 @@ const user = {
     age: 34,
     hobby: 'Soccer',
     isMarried: false,
+    shout: function() {
+        console.log("Ahhhh!");
+    }
 }
+
+const list = [
+    {
+        username: 'andy',
+        password: 'secret'
+    },
+    {
+        username: 'jess',
+        password: '123'
+    }
+]
+
+console.log(list[0].password);
+
+user.favoriteFood = "Spinach"
+;
+
+user.isMarried = true;
 
 console.log(user);
 
+//A Function inside an object is called a "method"
+console.log(user.shout());
