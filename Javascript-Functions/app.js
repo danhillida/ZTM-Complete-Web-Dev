@@ -81,7 +81,7 @@ const newsfeed = [
         timeline: ''
     }
 ]
-*/
+
 
 const database = [
     {
@@ -106,6 +106,86 @@ const passwordPrompt = prompt("What's your password?");
 
 function signIn(username, pass) {
     if (username === database[0].username && pass === database[0].password) {
+        console.log(newsfeed);
+    } else {
+        alert('Sorry, the username or password were incorrect');
+    }
+}
+
+signIn(userNamePrompt, passwordPrompt)
+
+
+const todos = [
+    "clean room",
+    'brush teeth',
+    'exercise',
+    'study javascript',
+    'eat healthy'
+];
+
+todos.forEach(function(todo, i) {
+    console.log(todo, i)
+})
+
+// for (let i = 0; i < todos.length; i++) {
+//     todos[i] = todos[i] + '!'
+// }
+
+// let counterOne = 0;
+// while (counterOne < 10) {
+//     console.log(++counterOne);
+// }
+
+// let counterTwo = 10;
+// do {
+//     console.log(counterTwo);
+//     counterTwo--;
+// } while (counterTwo > 0);
+
+console.log(todos);
+
+*/
+
+const database = [
+    {
+        username: 'andrei',
+        password: 'supersecret'
+    },
+    {
+        username: 'sally',
+        password: '123'
+    },
+    {
+        username: 'ingrid',
+        password: '777'
+    }
+];
+
+const newsfeed = [
+    {
+        username: 'Bobby',
+        timeline: 'So tired from all that learning'
+    },
+    {
+        username: 'Sally',
+        timeline: 'Javascript is sooooooo cool!'
+    }
+];
+
+const userNamePrompt = prompt("What's your username?");
+const passwordPrompt = prompt("What's your password?");
+
+function isUserValid(username, password) {
+    for (let i = 0; i < database.length; i++) {
+    if(database[i].username === username &&
+        database[i].password === password) {
+         return true;
+        } 
+    }return false;
+}
+
+function signIn(username, password) {
+    if (isUserValid(username, password)) {
         console.log(newsfeed);
     } else {
         alert('Sorry, the username or password were incorrect');
