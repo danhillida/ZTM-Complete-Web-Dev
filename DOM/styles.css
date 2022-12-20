@@ -1,0 +1,11 @@
+body {
+    background-color: antiquewhite;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+ul {
+    width:fit-content;
+}
