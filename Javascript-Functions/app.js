@@ -193,5 +193,48 @@ function signIn(username, password) {
 }
 
 signIn(userNamePrompt, passwordPrompt)
+
+
+function isUserValid(bool) {
+    return bool;
+}
+
+let answer = isUserValid(true) ? "you may enter" : "Access denied";
+
+let automatedAnswer = "your account # is" + (isUserValid(false)? '1234' : 'not Available')
+
+console.log(automatedAnswer);
+
+function moveCommand(direction) {
+    let whatHappens;
+    switch (direction) {
+        case 'forward':
+            whatHappens = 'you encounter a monster';
+            break;
+        case "back":
+            whatHappens = "you arrived home";
+            break;
+        case "right":
+            whatHappens = ' you found a river';
+            break;
+        case "left":
+            whatHappens = 'you run into a troll';
+            break;
+        default:
+            whatHappens = 'please enter a valid direction';
+    }
+    return whatHappens;
+
+}
 */
+
+const obj = {
+    player: 'bobby',
+    experience: 100,
+    wizardLevel: false
+}
+
+const {player, experience} = obj;
+
+let {wizardLevel} = obj;
 
