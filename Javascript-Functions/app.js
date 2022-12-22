@@ -226,7 +226,7 @@ function moveCommand(direction) {
     return whatHappens;
 
 }
-*/
+
 
 const obj = {
     player: 'bobby',
@@ -238,3 +238,31 @@ const {player, experience} = obj;
 
 let {wizardLevel} = obj;
 
+
+const first = () => {
+    const greet = 'hi';
+    const second = () => {
+        alert(greet);
+    }
+    return second;
+}
+ const newFunc = first();
+ newFunc();
+
+ //curried function
+
+ const multiply = (a) => (b) => a * b;
+ const multiplyByFive = multiply(5);
+ // This creates a function that will always multiply by 5;
+ console.log(multiplyByFive(6));
+
+ // compose function
+
+ const compose = (f, g) => (a) => f(g(a));
+
+ const sum = (num) => num + 1;
+
+ compose(sum, sum)(5);
+
+ //Avoid side effects (affects outside world) and functional purity (always return something/same thing) -- Deterministic
+ */
