@@ -266,3 +266,19 @@ const first = () => {
 
  //Avoid side effects (affects outside world) and functional purity (always return something/same thing) -- Deterministic
  */
+
+ const array = [1, 2, 3, 5];
+
+ const double = [];
+ const newArray = array.forEach((num) => {
+    
+    double.push(num * 2);
+ })
+
+ console.log(newArray);
+
+ //map, filter, reduce would be used daily
+
+ const mapArray = array.map((num) => {
+    return num * 2;
+ })
