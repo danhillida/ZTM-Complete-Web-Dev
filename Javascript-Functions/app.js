@@ -265,7 +265,7 @@ const first = () => {
  compose(sum, sum)(5);
 
  //Avoid side effects (affects outside world) and functional purity (always return something/same thing) -- Deterministic
- */
+
 
  const array = [1, 2, 3, 5];
 
@@ -282,5 +282,60 @@ const first = () => {
  const mapArray = array.map((num) => {
     return num * 2;
  })
+ */
 
+ const array = [
+    {
+      username: "john",
+      team: "red",
+      score: 5,
+      items: ["ball", "book", "pen"]
+    },
+    {
+      username: "becky",
+      team: "blue",
+      score: 10,
+      items: ["tape", "backpack", "pen"]
+    },
+    {
+      username: "susy",
+      team: "red",
+      score: 55,
+      items: ["ball", "eraser", "pen"]
+    },
+    {
+      username: "tyson",
+      team: "green",
+      score: 1,
+      items: ["book", "pen"]
+    },
+  
+  ];
+
+  const excitedUsers = [];
+  array.forEach((user) => {
+    let {username} = user;
+    username = username + '!';
+    excitedUsers.push(username);
+  })
+
+  console.log(excitedUsers);
  
+
+
+  const curiousUsers = array.map((user, i) => {
+    let { username } = user;
+    return username + '?'
+ })
+
+ console.log(curiousUsers);
+
+ const redTeam = array.filter(user => {
+   return user.team === 'red';
+ })
+
+ console.log(redTeam);
+
+ const totalScore = array.reduce((acc, user) => {return acc + user.score}, 0);
+
+ console.log(totalScore);
